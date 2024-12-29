@@ -1,0 +1,69 @@
+[
+  {
+    "question": "What is the meaning of life?",
+    "date": "2024-07-05",
+    "summary": "This question explores the fundamental purpose and significance of human existence. It delves into what makes life valuable, whether meaning is inherent or created, and how individuals find fulfillment and purpose.",
+    "prompts": [
+      "What activities or experiences make you feel most alive and engaged? Why?",
+      "If you could dedicate your life to one thing, what would it be and why?",
+      "What values are most important to you (e.g., love, knowledge, creativity, justice)? How do these relate to your sense of meaning?",
+       "What impact do you want to have on the world, even if small? How does that contribute to your feeling of purpose?",
+        "How do your relationships with others contribute to your feeling of purpose and meaning?",
+      "Is the meaning of life found in connection with others, or something more individual?",
+      "How do your interactions with the world around you (nature, art, culture) influence your perspective on meaning?",
+       "Do you believe the meaning of life is something to be discovered, or something to be created?",
+      "Is the meaning of life something universal or something unique to each individual?",
+       "If there isn't an inherent, external meaning, does that make life less meaningful?",
+       "How have challenging experiences or periods of suffering shaped your understanding of meaning?",
+       "How does growth and learning contribute to your sense of purpose?",
+       "Do you find meaning in achieving goals, or in the process of striving?",
+       "Have you ever been drawn to any specific philosophy or belief system that explores the meaning of life? What aspects of it resonate with you?",
+       "If there is no inherent meaning, does the concept of absurdity appeal to you?",
+       "How do concepts like happiness and fulfillment relate to your understanding of life's meaning?"
+    ]
+  },
+  {
+    "question": "Do we have free will or is everything predestined?",
+    "date": "2024-07-04",
+    "summary": "This question investigates the nature of human agency. It explores whether our choices are truly our own, or if they are predetermined by past events and external forces. This debate touches upon fundamental concepts of responsibility, morality, and the nature of reality.",
+    "prompts": [
+      "When you make a decision, do you feel like you genuinely have options, or do you feel like it was always going to happen that way?",
+      "Can you think of a time when you felt like you had a significant influence on the course of events? How did that feel?",
+      "How do you reconcile personal responsibility and accountability if our actions are predetermined?",
+      "What are some arguments for the idea that the universe operates according to predetermined laws?",
+      "How might factors like genetics and upbringing influence your actions and choices?",
+      "If everything is determined, does the concept of morality lose its meaning?",
+      "How do you define free will? Is it simply the ability to choose between options, or is there more to it?",
+      "Can you explain why the feeling of having free will is so powerful?",
+       "How does the notion of randomness and uncertainty relate to the concept of free will?",
+         "Have you heard about the philosophical position of compatibilism, which suggests that free will and determinism are compatible? What do you think of this view?",
+          "Are there any other philosophical views on this question that you find compelling?",
+          "If you believed we had complete free will, how would that change your choices?",
+      "How would the belief in either free will or determinism change how you live your life?",
+       "If everything was predestined, would you feel less motivated to take action?",
+       "How does this debate relate to concepts like fate, luck, and destiny?"
+    ]
+  },
+  {
+    "question": "What is consciousness?",
+    "date": "2024-07-03",
+    "summary": "This question delves into the mystery of subjective experience. It asks what it means to be aware, to have thoughts, feelings, and perceptions. This exploration touches on the relationship between the mind and body, and how physical processes give rise to subjective awareness.",
+     "prompts": [
+      "Describe what it feels like to be conscious, from your own subjective experience.",
+        "What are the qualities that make you aware of yourself and your surroundings?",
+        "Can you imagine what it might be like to be another person, animal, or even a complex machine? How do you know they are conscious?",
+        "What do you think makes the 'hard problem' of consciousness so difficult to solve? (i.e., explaining how subjective experience arises from physical matter)",
+       "If our brains are just biological machines, why do we have subjective feelings and awareness?",
+         "How would you prove that someone is conscious?",
+        "What role do you think the brain and nervous system play in creating consciousness?",
+         "What biological processes might give rise to conscious experience?",
+         "Is there a specific part of the brain responsible for consciousness, or is it a more distributed phenomenon?",
+        "How does your consciousness change during sleep, dreams, or altered states of mind (e.g., meditation, hypnosis)?",
+        "Is there a difference between being conscious and being self-aware?",
+       "How do you reconcile concepts like animal consciousness, and the idea that some animals seem to have subjective experiences?",
+        "Are you familiar with any philosophical views on consciousness (e.g., materialism, dualism, idealism)? What do you think about them?",
+        "What scientific fields do you think might eventually help us better understand consciousness (e.g., neuroscience, AI, psychology)?",
+        "How does the concept of consciousness relate to questions about the self, identity, and personal existence?"
+    ]
+  }
+]
