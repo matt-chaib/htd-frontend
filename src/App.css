@@ -7,7 +7,7 @@
   min-height: 100vh;
 }
 
-.read-the-docs {
+.subheader {
   color: #888;
 }
 
@@ -48,4 +48,16 @@
 
 .question {
   margin-bottom: 2rem;
+}
+
+.question-tags {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.tag-button {
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: 1px solid #CCC;
 }

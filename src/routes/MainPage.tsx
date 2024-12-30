@@ -55,7 +55,7 @@ export const MainPage = () => {
       return <div>Questions could not be loaded...</div>;
     }
 
-    
+    console.log("Questions", questions)
 
     return (
         <div className="questions-block">

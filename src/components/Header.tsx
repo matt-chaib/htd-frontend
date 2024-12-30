@@ -3,8 +3,8 @@ export const Header = () => {
     return (
         <div className="header">
              <h1>#deep</h1>
-      <p className="read-the-docs">
-        A daily philosophical question for you to ponder.
+      <p className="subheader">
+        A daily thought experiment, philosophical question, or shower thought for you to ponder.
       </p>
       <Separator />
         </div>
