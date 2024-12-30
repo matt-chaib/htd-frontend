@@ -20,6 +20,7 @@ export const DailyQuestion = ({ question }: DailyQuestionProps) => {
             
             <div className="question-text">{question.text}</div>
             <div className="question-summary">{question.summary}</div>
+            <div className="question-link">Discuss this question on Reddit at <a href={question.link || "https://www.reddit.com/r/hashtagdeep"} target="_blank">r/hashtagdeep</a>.</div>
             <div className="question-tags">
             {question.tags && question.tags.map(tag => <div key={tag.id} className="tag-button">{tag.name}</div>)}
             </div>

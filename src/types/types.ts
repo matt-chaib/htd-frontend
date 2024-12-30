@@ -4,4 +4,5 @@ export type Question = {
     text: String;
     tags: String[];
     date_used: Date;
+    link: String;
   };

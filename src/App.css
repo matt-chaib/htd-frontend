@@ -42,7 +42,11 @@
 
 .question-summary {
   font-size: 1rem;
+}
+
+.question-link {
   margin-bottom: 1.5rem;
+
 }
 
 .questions-block {
