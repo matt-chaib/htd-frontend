@@ -11,7 +11,7 @@ export const DailyQuestion = ({ question }: DailyQuestionProps) => {
         <>
         <div className="question-header">
             <div className="question-date">{`Question #${question.id}`}</div>
-            <div className="question-date">{new Date().toLocaleDateString('en-GB', {
+            <div className="question-date">{question.date_used && new Date(question.date_used).toLocaleDateString('en-GB', {
   day: '2-digit',
   month: 'long',
   year: 'numeric',
@@ -21,7 +21,7 @@ export const DailyQuestion = ({ question }: DailyQuestionProps) => {
             <div className="question-text">{question.text}</div>
             <div className="question-summary">{question.summary}</div>
             <div className="question-tags">
-            {question.tags.map(tag => <div key={tag.id} className="tag-button">{tag.name}</div>)}
+            {question.tags && question.tags.map(tag => <div key={tag.id} className="tag-button">{tag.name}</div>)}
             </div>
         </>
     )
