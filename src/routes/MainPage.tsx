@@ -44,7 +44,9 @@ export const MainPage = () => {
       staleTime: 1000 * 60 * 5, // Cache for 5 minutes
     });
 
-    if (isLoading) return <div>Loading Questions...</div>;
+    if (isLoading) return <>
+    <div className="skeleton" style={{ width: '400px', height: '200px' }}></div>
+  </>;
     if (isError) {
       console.error(`Error: ${(error as Error).message}`)
       return <div>Questions could not be loaded...</div>;
