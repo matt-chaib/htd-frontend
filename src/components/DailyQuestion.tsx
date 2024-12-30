@@ -9,7 +9,15 @@ export const DailyQuestion = ({ question }: DailyQuestionProps) => {
     console.log("Question", question)
     return (
         <>
+        <div className="question-header">
             <div className="question-date">{`Question #${question.id}`}</div>
+            <div className="question-date">{new Date().toLocaleDateString('en-GB', {
+  day: '2-digit',
+  month: 'long',
+  year: 'numeric',
+})}</div>
+        </div>
+            
             <div className="question-text">{question.text}</div>
             <div className="question-summary">{question.summary}</div>
             <div className="question-tags">

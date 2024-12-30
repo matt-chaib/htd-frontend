@@ -27,6 +27,13 @@
   font-style: italic;
 }
 
+.question-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 0.3rem;
+}
+
 .question-text {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
