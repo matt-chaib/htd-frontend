@@ -28,7 +28,7 @@ function Navbar() {
           </div>
           <div className='navbar-title'>
           {/* <h2>#deep</h2> */}
-          <img style={{height: "58px"}}src="public/favicon-96x96.png"></img>
+          <img style={{height: "58px"}}src="./favicon-96x96.png"></img>
           </div>
         </ul>
         <Separator />
