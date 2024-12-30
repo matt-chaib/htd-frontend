@@ -4,7 +4,7 @@ export const Header = () => {
         <div className="header">
              <h1>#deep</h1>
       <p className="subheader">
-        A daily thought experiment, philosophical question, or shower thought for you to ponder.
+        A daily thought experiment, philosophical question, or conundrum for you to ponder.
       </p>
       <Separator />
         </div>
