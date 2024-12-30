@@ -8,6 +8,9 @@ import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'
+import { BrowserRouter, Routes, Route } from "react-router";
+import Navbar from './components/Navbar';
+import About from './routes/About';
 
 function App() {
 
@@ -16,10 +19,13 @@ function App() {
   return (
     <>
       <QueryClientProvider client={queryClient}>
-      <Header />
+      <Navbar />
       <div className='main-section'>
-        <MainPage />
-      </div>
+    <Routes>
+      <Route path="/" element={<MainPage />} />
+      <Route path="/about" element={<About />} />
+    </Routes>
+    </div>
       </QueryClientProvider>
     </>
   )

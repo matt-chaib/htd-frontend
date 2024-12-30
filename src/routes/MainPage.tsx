@@ -3,6 +3,8 @@ import { Separator } from "../components/Separator";
 import { useState } from "react";
 import { useQuery } from '@tanstack/react-query';
 import { Question } from "../types/types";
+import { Header } from "../components/Header";
+
   const QuestionsShown = ({questions, showPastQuestions, setShowPastQuestions}) => {
     if (showPastQuestions) {
         return ( <>
@@ -55,8 +57,11 @@ export const MainPage = () => {
     console.log("Questions", questions)
 
     return (
+      <>
+        <Header />
         <div className="questions-block">
            <QuestionsShown questions={questions || []} showPastQuestions={showPastQuestions} setShowPastQuestions={setShowPastQuestions}/>
         </div>
+      </>
     )
 }
