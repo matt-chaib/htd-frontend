@@ -20,7 +20,7 @@ import { Header } from "../components/Header";
     } else {
         return (
             <div className="question">
-            {qotd && <DailyQuestion question={qotd}/>}
+            {qotd && questions && <DailyQuestion question={questions.filter((question) => question.id === qotd.id)[0]}/>}
             <Separator />
             <button onClick={() => setShowPastQuestions(!showPastQuestions)}>Show Past Questions</button>
           </div>
@@ -49,17 +49,19 @@ export const MainPage = () => {
     const show_limit: number = 50;
     const [showPastQuestions, setShowPastQuestions]= useState(false);
 
-    const { data: questions, isLoading, isError, error } = useQuery({
-      queryKey: ['questions'], // Explicitly naming the query
-      queryFn: fetchQuestions,
-      staleTime: 1000 * 60 * 5, // Cache for 5 minutes
-    });
-
     const { data: qotd, isLoading: qotdLoading, isError: qotd_isError, error: qotd_error } = useQuery({
       queryKey: ['questions', 'question-of-the-day'], // Explicit query naming
       queryFn: fetchQOTD,
       staleTime: 1000 * 60 * 5, // Cache data for 5 minutes
     });
+
+    const { data: questions, isLoading, isError, error } = useQuery({
+      queryKey: ['questions'], // Explicitly naming the query
+      queryFn: fetchQuestions,
+      staleTime: 1000 * 60 * 5, // Cache for 5 minutes
+      enabled: !!qotd, // Ensure this query runs only after the QOTD is fetched
+    });
+
 
     console.log(qotd)
   
