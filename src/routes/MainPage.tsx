@@ -37,7 +37,7 @@ const fetchQuestions = async (): Promise<Question[]> => {
 };
 
 const fetchQOTD = async (): Promise<Question> => {
-  const response = await fetch(`${import.meta.env.VITE_API_URL}/questions/question-of-the-day`);
+  const response = await fetch(`${import.meta.env.VITE_API_URL}/questions/api/question-of-the-day`);
   if (!response.ok) {
     throw new Error('Failed to fetch question of the day');
   }

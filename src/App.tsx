@@ -11,6 +11,7 @@ import {
 import { BrowserRouter, Routes, Route } from "react-router";
 import Navbar from './components/Navbar';
 import About from './routes/About';
+import QuestionDetails from './routes/QuestionDetails';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
     <Routes>
       <Route path="/" element={<MainPage />} />
       <Route path="/about" element={<About />} />
+      <Route path="/questions/:id" element={<QuestionDetails />} />
     </Routes>
     </div>
       </QueryClientProvider>
