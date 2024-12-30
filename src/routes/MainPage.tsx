@@ -20,7 +20,7 @@ import { Header } from "../components/Header";
     } else {
         return (
             <div className="question">
-            {questions && <DailyQuestion question={qotd}/>}
+            {qotd && <DailyQuestion question={qotd}/>}
             <Separator />
             <button onClick={() => setShowPastQuestions(!showPastQuestions)}>Show Past Questions</button>
           </div>
