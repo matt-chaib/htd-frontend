@@ -8,6 +8,7 @@ function Navbar() {
     return (
       <nav className="navbar">
         <ul>
+          <div className="nav-buttons">
           <li>
             <Link
               to="/"
@@ -24,8 +25,13 @@ function Navbar() {
               About
             </Link>
           </li>
+          </div>
+          <div className='navbar-title'>
+          {/* <h2>#deep</h2> */}
+          <img style={{height: "58px"}}src="public/favicon-96x96.png"></img>
+          </div>
         </ul>
-        <Separator width={300}/>
+        <Separator />
       </nav>
     );
 }
