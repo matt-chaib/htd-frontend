@@ -18,7 +18,7 @@
   align-items: center;
   place-items: center;
   gap: 1rem;
-  width: 100vw;  /* Make it span the full width of the viewport */
+  width: 100%;  /* Make it span the full width of the viewport */
   background-color: #fff;  /* Optional: Give it a background color */
   z-index: 1000;  /* Optional: Ensure it stays on top of other content */
 }
