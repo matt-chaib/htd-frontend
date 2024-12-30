@@ -13,7 +13,7 @@ export const DailyQuestion = ({ question }: DailyQuestionProps) => {
             <div className="question-text">{question.text}</div>
             <div className="question-summary">{question.summary}</div>
             <div className="question-tags">
-            {question.tags.map(tag => <div className="tag-button">{tag.name}</div>)}
+            {question.tags.map(tag => <div key={tag.id} className="tag-button">{tag.name}</div>)}
             </div>
         </>
     )
