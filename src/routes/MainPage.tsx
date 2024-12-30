@@ -2,12 +2,7 @@ import { DailyQuestion } from "../components/DailyQuestion";
 import { Separator } from "../components/Separator";
 import { useState } from "react";
 import { useQuery } from '@tanstack/react-query';
-
-type Question = {
-    question: string;
-    date: Date;
-  };
-
+import { Question } from "../types/types";
   const QuestionsShown = ({questions, showPastQuestions, setShowPastQuestions}) => {
     if (showPastQuestions) {
         return ( <>
