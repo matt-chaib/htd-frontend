@@ -12,14 +12,26 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import Navbar from './components/Navbar';
 import About from './routes/About';
 import QuestionDetails from './routes/QuestionDetails';
+import { PersistQueryClientProvider } from '@tanstack/react-query-persist-client'
+import { createSyncStoragePersister } from '@tanstack/query-sync-storage-persister'
 
 function App() {
 
-  const queryClient = new QueryClient()
+  const queryClient = new QueryClient({
+  })
+  
+  // 2. the persister
+  const persister = createSyncStoragePersister({
+    storage: window.localStorage,
+  })
+  
 
   return (
     <>
-      <QueryClientProvider client={queryClient}>
+       <PersistQueryClientProvider
+    client={queryClient}
+    persistOptions={{ persister }}
+  >
       <Navbar />
       <div className='main-section'>
     <Routes>
@@ -28,7 +40,7 @@ function App() {
       <Route path="/questions/:id" element={<QuestionDetails />} />
     </Routes>
     </div>
-      </QueryClientProvider>
+    </PersistQueryClientProvider>
     </>
   )
 }

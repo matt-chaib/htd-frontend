@@ -52,8 +52,6 @@ const fetchQOTD = async (): Promise<Question> => {
   return response.json();
 };
 
-console.log("Time until end of day", getTimeUntilEndOfDay()/3600000)
-
 export const MainPage = () => {
     const show_limit: number = 50;
     const [showPastQuestions, setShowPastQuestions]= useState(false);
