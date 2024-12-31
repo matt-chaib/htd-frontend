@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useQuery } from '@tanstack/react-query';
 import { Question } from "../types/types";
 import { Header } from "../components/Header";
+import { getTimeUntilEndOfDay } from "../utils";
 
 interface QuestionsShownProps {
   questions: Question[]; // Array of questions
@@ -51,6 +52,7 @@ const fetchQOTD = async (): Promise<Question> => {
   return response.json();
 };
 
+console.log("Time until end of day", getTimeUntilEndOfDay()/3600000)
 
 export const MainPage = () => {
     const show_limit: number = 50;
@@ -59,13 +61,13 @@ export const MainPage = () => {
     const { data: qotd, isLoading: qotdLoading, isError: qotd_isError, error: qotd_error } = useQuery({
       queryKey: ['questions', 'question-of-the-day'], // Explicit query naming
       queryFn: fetchQOTD,
-      staleTime: 1000 * 60 * 5, // Cache data for 5 minutes
+      staleTime: getTimeUntilEndOfDay(),
     });
 
     const { data: questions, isLoading, isError, error } = useQuery({
       queryKey: ['questions', { limit: show_limit }], // Include limit in the query key
       queryFn: () => fetchQuestions(show_limit),
-      staleTime: 1000 * 60 * 5, // Cache for 5 minutes
+      staleTime: getTimeUntilEndOfDay(),
       enabled: !!qotd, // Ensure this query runs only after the QOTD is fetched
     });
 
