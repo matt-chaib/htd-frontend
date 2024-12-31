@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { DailyQuestion } from '../components/DailyQuestion';
 
 const QuestionDetails = () => {
   const { id } = useParams(); // Get the question ID from the URL
@@ -26,13 +27,7 @@ const QuestionDetails = () => {
 
   return (
     <div>
-      <h1>{question.text}</h1>
-      <p>{question.summary}</p>
-      <ul>
-        {question.tags.map((tag) => (
-          <li key={tag.id}>{tag.name}</li>
-        ))}
-      </ul>
+     <DailyQuestion question={question} />
     </div>
   );
 };

@@ -5,7 +5,14 @@ import { useQuery } from '@tanstack/react-query';
 import { Question } from "../types/types";
 import { Header } from "../components/Header";
 
-  const QuestionsShown = ({questions, showPastQuestions, setShowPastQuestions, qotd}) => {
+interface QuestionsShownProps {
+  questions: Question[]; // Array of questions
+  showPastQuestions: boolean; // Boolean to indicate if past questions should be shown
+  setShowPastQuestions: (value: boolean) => void; // Function to toggle the state
+  qotd: Question | null; // Question of the Day, or null if not available
+}
+
+const QuestionsShown: React.FC<QuestionsShownProps> = ({ questions, showPastQuestions, setShowPastQuestions, qotd }) => {
     if (showPastQuestions) {
         return ( <>
          {questions.map((question) => {
@@ -28,8 +35,8 @@ import { Header } from "../components/Header";
     }
 }
 
-const fetchQuestions = async (): Promise<Question[]> => {
-  const response = await fetch(`${import.meta.env.VITE_API_URL}/questions`);
+const fetchQuestions = async (limit: number): Promise<Question[]> => {
+  const response = await fetch(`${import.meta.env.VITE_API_URL}/questions?limit=${limit}`);
   if (!response.ok) {
     throw new Error('Failed to fetch questions');
   }
@@ -56,8 +63,8 @@ export const MainPage = () => {
     });
 
     const { data: questions, isLoading, isError, error } = useQuery({
-      queryKey: ['questions'], // Explicitly naming the query
-      queryFn: fetchQuestions,
+      queryKey: ['questions', { limit: show_limit }], // Include limit in the query key
+      queryFn: () => fetchQuestions(show_limit),
       staleTime: 1000 * 60 * 5, // Cache for 5 minutes
       enabled: !!qotd, // Ensure this query runs only after the QOTD is fetched
     });
