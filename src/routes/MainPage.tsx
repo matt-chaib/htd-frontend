@@ -83,7 +83,7 @@ export const MainPage = () => {
   } = useQuery({
     queryKey: ["questions", "question-of-the-day"], // Explicit query naming
     queryFn: fetchQOTD,
-    // staleTime: getTimeUntilEndOfDay(),
+    staleTime: 30000
   });
 
   const {
@@ -94,7 +94,7 @@ export const MainPage = () => {
   } = useQuery({
     queryKey: ["questions", { limit: show_limit }], // Include limit in the query key
     queryFn: () => fetchQuestions(show_limit),
-    // staleTime: getTimeUntilEndOfDay(),
+    staleTime: 30000,
     enabled: !!qotd, // Ensure this query runs only after the QOTD is fetched
   });
 
