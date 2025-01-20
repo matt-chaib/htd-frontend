@@ -59,13 +59,13 @@ export const MainPage = () => {
     const { data: qotd, isLoading: qotdLoading, isError: qotd_isError, error: qotd_error } = useQuery({
       queryKey: ['questions', 'question-of-the-day'], // Explicit query naming
       queryFn: fetchQOTD,
-      staleTime: getTimeUntilEndOfDay(),
+      // staleTime: getTimeUntilEndOfDay(),
     });
 
     const { data: questions, isLoading, isError, error } = useQuery({
       queryKey: ['questions', { limit: show_limit }], // Include limit in the query key
       queryFn: () => fetchQuestions(show_limit),
-      staleTime: getTimeUntilEndOfDay(),
+      // staleTime: getTimeUntilEndOfDay(),
       enabled: !!qotd, // Ensure this query runs only after the QOTD is fetched
     });
 
