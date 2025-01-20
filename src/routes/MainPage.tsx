@@ -16,7 +16,7 @@ interface QuestionsShownProps {
 const QuestionsShown: React.FC<QuestionsShownProps> = ({ questions, showPastQuestions, setShowPastQuestions, qotd }) => {
     if (showPastQuestions) {
         return ( <>
-         {questions.map((question) => {
+         {questions.filter((question) => question.id != qotd.id).map((question) => {
             return (
                 <div className="question">
                   <DailyQuestion question={question}/>
@@ -28,7 +28,7 @@ const QuestionsShown: React.FC<QuestionsShownProps> = ({ questions, showPastQues
     } else {
         return (
             <div className="question">
-            {qotd && questions && <DailyQuestion question={questions.filter((question) => question.id === qotd.id)[0]}/>}
+            {qotd && questions && <DailyQuestion question={qotd}/>}
             <Separator />
             <button onClick={() => setShowPastQuestions(!showPastQuestions)}>Show Past Questions</button>
           </div>
